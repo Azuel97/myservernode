@@ -11,7 +11,7 @@ npm install -g nodemon
 nodemon index.js
 ```
 
-### Per decidere la porta il valroe va al secondo argv, di default è la 2223 : 
+### Per decidere la porta il valore va al secondo argv, di default è la 2223 : 
 ```
 nodemon index.js 8080
 ```
