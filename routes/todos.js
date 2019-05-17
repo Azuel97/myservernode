@@ -25,7 +25,7 @@ router.get('/:id/', (req, res) => {
 
 
 // Metodi POST, con titolo obbligatorio, non va in conflitto con l'id perhcè è post
-router.post('/', (req, res) => {
+router.post('/form', (req, res) => {
     //console.log(req.body)
     const body = req.body
     const {id, titolo, descrizione} = req.body
@@ -43,7 +43,28 @@ router.post('/', (req, res) => {
         status.campo = 'titolo'
     }
 
-    //res.send(body)
+    res.send(status)
+})
+
+
+// Metodi PUT
+router.put('/form/update', (req, res) => {
+    
+    const status = {}
+    status.code = 'ok'
+    status.message = `UPDATE`
+
+    res.send(status)
+})
+
+
+// Metodi DELETE
+router.delete('/form/delete', (req, res) => {
+    
+    const status = {}
+    status.code = 'ok'
+    status.message = `DELETE`
+
     res.send(status)
 })
 
